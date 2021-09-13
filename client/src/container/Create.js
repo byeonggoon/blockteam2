@@ -167,10 +167,6 @@ function Create() {
                 <div>
                     <button onClick={handleMint}>Upload</button> 
                     <button href="#" onClick={handleReset}>Reset</button>
-                    {/* <button onClick={handleGet}>콘솔에 발행한 NFT목록</button> */}
-                    {/* <button onClick={handleRead}> 주소나왕!!</button>
-                    <button onClick={handlemetahash}>메타나와! </button> */}
-
 
                 </div>
                 </div>
