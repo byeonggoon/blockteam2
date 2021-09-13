@@ -26,14 +26,6 @@ function Create() {
     const test = useRef();
     const history = useHistory();
 
-    // const [sta,setsta]=useState({
-    //     ipfsHash: null,
-    //     ipfsMetaHash: null,
-    //     buffer: '',
-    //     imageUrl: null,
-    //     flag: false,
-    // });
-
     useEffect(() => {
         if(conn.shopInstance==null){
             alert("로그인후 사용가능!")
@@ -55,7 +47,7 @@ function Create() {
             reader.onloadend = () => fileToBuffer(reader);
         }
         else{
-            console.log("역시")
+            console.log("읽을파일이 없다.")
         }
     };
 
@@ -70,9 +62,8 @@ function Create() {
     const handleUpload = async () => {
         if (upload.files.length > 0) {
             dispatch(setipfsHash('Uploading...'));
-            console.log("할거지",upload.buffer);
+            console.log("업로드 버퍼",upload.buffer);
             await ipfs.add(upload.buffer, (err, ipfsHash) => {
-                console.log("안오지");
                 console.log(err, ipfsHash);
                 //setState by setting ipfsHash to ipfsHash[0].hash
                 dispatch(setipfsHash(ipfsHash[0].hash));
@@ -118,16 +109,7 @@ function Create() {
     const handleIpfsMetaHash = (ipfsMetaHash) => {
         dispatch(setipfsMetaHash(ipfsMetaHash));
     }
-    
-//     const handleRead = async()=>{
-//         const handleRead = await conn.shopInstance.readAllAddresses();
-//         console.log(handleRead, '주소나왕!!!');
-//     }
-//     const dd="QmehFe5ghQnsdoFepxpzG5sAFLtneGYrjmM3mNyLygnr9B";
-//    const handlemetahash=async()=>{
-//     const dododo=  await axios.get( "https://gateway.ipfs.io/ipfs/QmehFe5ghQnsdoFepxpzG5sAFLtneGYrjmM3mNyLygnr9B");
-//     console.log("sibal",dododo);    
-//     }
+
 
     return (
         <div className="create-container">
