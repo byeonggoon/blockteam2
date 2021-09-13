@@ -22,7 +22,7 @@ function* takeconn(){
   console.log("this")
   console.log(getWeb3)
   const results = yield call(getWeb3);
-  yield console.log("왜",results);
+  yield console.log("results",results);
   yield put(connweb(results));
   yield put(sgetinstance(results))
 }
