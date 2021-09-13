@@ -43,26 +43,8 @@ function Home() {
   };
 
 
-//   $(window).scroll(function(){
-//     if($(window).scrollTop() > 50){
-//       $('header , .btn-top').addClass('active')
-//     }
-//     else{
-//       $('header , .btn-top').removeClass('active')
-//     }
-//   })
-//   // Header Trigger
-//   $('.trigger').click(function(){
-//     $(this).toggleClass('active');
-//     $('.gnb').togleClass('active');
-//   });
 
-//   $('.gnb a, section').click(function(){
-//     $('.gnb , .trigger').removeClass('active');
-//   })
   
-  
-  // Faq Accordion
   $('.faq-desc').eq(0).show();
   $('.faq-title').click(function(){
     $(this).next().stop().slideDown();
@@ -92,15 +74,6 @@ function Home() {
               </span>
               <h1>
                 국내 유일 NFT 마켓<br></br>U1L
-                {/* <em id="typing"></em> */}
-                {/* <em id="typing"><TypeIt
-                  options={{
-                    strings: ["Business strategy.", "The Value in Blockchain", "Creative Idea."], // 타이핑 텍스트 입력
-                    speed: 100, // 알파벳 타이핑 속도
-                    autoStart: true, // 자동 재생 사용
-                    breakLines: false, // 줄 바꿈 사용안함
-                   }}
-                /></em> */}
               </h1>
               <p>
                 dApp based on Ethereum Network
